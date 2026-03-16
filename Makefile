@@ -14,10 +14,9 @@ endif
 
 .PHONY: protoc-go
 protoc-go:
-	protoc -I . \
-	--go_out=./protogen/go --go_opt=module=${GO_MODULE} --go_opt=paths=source_relative \
-	--go-grpc_out=./protogen/go --go-grpc_opt=module=${GO_MODULE} --go-grpc_opt=paths=source_relative \
-	./proto/hello/*.proto ./proto/payment/*.proto ./proto/transaction/*.proto
+	protoc --go_opt=module=${GO_MODULE} --go_out=. \
+	--go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
+	./proto/hello/*.proto ./proto/payment/*.proto ./proto/transaction/*.proto \
 
 .PHONY: build
 build: clean protoc-go
