@@ -3,8 +3,7 @@ syntax = "proto3";
 package transaction;
 
 // replace with your own github.com/<username>/<repository>
-option go_package = "github.com/lamsalsamip1/Protobuf/proto/cart";
-
+option go_package = "github.com/lamsalsamip1/Protobuf/proto/transaction";
 
 message CartItem {
   string item_uuid = 1 [json_name = "item_id"];
