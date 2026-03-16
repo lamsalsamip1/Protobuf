@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello;
+
+// replace with your own github.com/<username>/<repository>
+option go_package = "github.com/lamsalsamip1/Protobuf/proto/hello";
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
+
+/* HelloService */
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}
