@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bank;
+
+import "proto/bank/type/account.proto";
+
+option go_package = "github.com/lamsalsamip1/Protobuf/protogen/go/proto/bank";
+
+// service for bank
+service BankService {
+  rpc GetCurrentBalance(CurrentBalanceRequest) returns (CurrentBalanceResponse) {}
+}

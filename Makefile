@@ -18,6 +18,7 @@ protoc-go:
 	--go_out=./protogen/go --go_opt=paths=source_relative \
 	--go-grpc_out=./protogen/go --go-grpc_opt=paths=source_relative \
 	./proto/hello/*.proto ./proto/payment/*.proto ./proto/transaction/*.proto
+	./proto/bank/*.proto ./proto/bank/type/*.proto
 
 .PHONY: build
 build: clean protoc-go
